@@ -1,0 +1,137 @@
+
+.heading
+{
+   font-family: 'Julius Sans One', sans-serif;
+   font-size: 15px;
+}
+.sub-heading
+{
+  font-family: 'Comfortaa', cursive;
+  color: #FF6000;
+}
+.para
+{
+  font-family: 'lato';
+}
+.webli-list
+{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  z-index: 400;
+  height: 53px;
+}
+.webli-list .nav-item
+{
+  color: black;
+  background-color: lightgray;
+}
+.webli-list .nav-item a
+{
+  color: black;
+  height: 100%;
+}
+
+/* SIDENAV */
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 5000;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    
+    font-size: 20px;
+    display: inline-block;
+    position: absolute;
+    left: 2px;
+    top: 10px;
+    
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.card-body
+{
+  border : 1px solid lightgray;
+  height: 150px;
+}
+.float-text
+{
+  float: left;
+}
+.bookimage
+{
+  width: 25%;
+  display: block;
+  float: left;
+}
+.booktext
+{
+  width: 73%;
+  display: block;
+  padding-left: 30px;
+  float: right;
+}
+.booktext p
+{
+  margin :0px;
+}
+.sidebarlist
+{
+  padding-left: 0px;
+}
+.sidebarlist li
+{
+  background-color: #fff;
+  list-style: none;
+  padding : 10px 6px;
+  border-top : 1px solid lightgray;
+  color: black;
+  font-size: 14px;
+}
+.sidebarlist a
+{
+  background-color: #fff;
+}
+.sidebarlist a:hover > li
+{
+  background-color: lightgray;
+}
+.searchinput
+{
+  display: none;
+}
+.cross
+{
+  display: none;
+}
