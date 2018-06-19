@@ -780,7 +780,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagi
     		});
 
     	});
-    	$(document).ready(function(){
+    	/*$(document).ready(function(){
     	    
             $('#updateDetailsForm').on("submit",function(e){
             e.preventDefault();	
@@ -808,7 +808,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagi
     		return false;
     		           }); 
     	});
-       
+       */
 
 
     	
