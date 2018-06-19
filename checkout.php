@@ -347,7 +347,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagi
 						    </a>
 						</div>
 						<hr>
-						<div class="container para" id="recipient">
+						<div class="container para" id="reciepient">
 		        		<div class="col-md-4 recipientinfo">
 		        			<p style="color: gray;position: absolute;right: 3%;top: 3%;">Default</p>
 		        			<p id="Name" style="font-size: 17px;font-weight: bold;"></p>
@@ -375,7 +375,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagi
     
 
                                 </form> -->
-                                <form id="updateDetailsForm" action="">
+                                <form id="updateDetailsForm" action="" >
                                 <div class="md-form">
                                     <input type="text" id="ReciepientName" name="Name" class="form-control" style="width: 50%;">
                                     <label for="ReciepientName" class="heading" >Name</label>
@@ -385,11 +385,11 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagi
                                     <label for="ReciepientNumber" class="heading" >Phone Number</label>
                                 </div>
                                 <div class="md-form">
-                                    <input type="text" id="RecipientPincode" name="Pincode" class="form-control" style="width: 50%;">
+                                    <input type="text" id="ReciepientPincode" name="Pincode" class="form-control" style="width: 50%;">
                                     <label for="RecipientPincode" class="heading" >Enter Pincode</label>
                                 </div>
                                 <div class="md-form">
-                                    <input type="text" id="RecipientAddress" name="Address" class="form-control" style="width: 50%;">
+                                    <input type="text" id="ReciepientAddress" name="Address" class="form-control" style="width: 50%;">
                                     <label for="RecipientAddress" class="heading" >Enter Address</label>
                                 </div>
                                  <div>
@@ -726,16 +726,11 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagi
     	var i = 0;
     	function editdetails()
     	{
-             if(i==0)
-         	{
-         		document.getElementById('recipient').style.display='none';
-         		i=1;
-         	}
-         	else
-         	{
-         		document.getElementById('recipient').style.display='block';
-         		i=0;
-         	}
+           
+         		document.getElementById('reciepient').style.display='none';
+         		document.getElementById('collapseExample').style.display='block';
+         		
+         
 
     	}
     </script>
@@ -780,11 +775,14 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagi
     		});
 
     	});
-    	/*$(document).ready(function(){
+    	$(document).ready(function(){
     	    
-            $('#updateDetailsForm').on("submit",function(e){
+            $("#updateDetailsForm").on("submit",function(e){
             e.preventDefault();	
-    		var formData = $('#updateDetailsForm').serialize();
+        });
+            $("#updateButton").on("click",function(e){
+            e.preventDefault();	
+    		var formData = $("#updateDetailsForm").serialize();
     		$.ajax({
     			type:"post",
     			url:"updatedetails.php",
@@ -793,22 +791,22 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagi
     			success:function(response)
     			{
 
-    				var details=JSON.parse(JSON.stringify(response);
+    				var details=JSON.parse(JSON.stringify(response));
     				console.log(details);
     				document.getElementById('Name').innerHTML=details.Name;
     				document.getElementById('Number').innerHTML=details.Number;
     				document.getElementById('Pincode').innerHTML=details.Pincode;
     				document.getElementById('Address').innerHTML=details.Address;
-    				document.getElementById('recipient').style.display='block';
+    				document.getElementById('reciepient').style.display='block';
     				document.getElementById('collapseExample').style.display='none'; 		
     				
 
     			}
     		});
     		return false;
-    		           }); 
+    		}); 
     	});
-       */
+       
 
 
     	
